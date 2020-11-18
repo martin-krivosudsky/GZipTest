@@ -7,3 +7,5 @@
 /GZipTest/bin/Debug/netcoreapp3.1
 /GZipTest/obj
 /.vs
+/GZipTest.Tests/bin/Debug/netcoreapp3.1
+/GZipTest.Tests/obj

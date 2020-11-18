@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GZipTest.Compress
+﻿namespace GZipTest.Compress
 {
     internal interface IDecompressor
     {
