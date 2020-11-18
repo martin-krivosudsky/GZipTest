@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Compress/obj
+/Compress/bin/Debug/netcoreapp3.1
+/GZipTest/bin/Debug/netcoreapp3.1
+/GZipTest/obj
+/.vs
