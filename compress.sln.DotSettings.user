@@ -6,5 +6,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::8378419C-BB3F-4AF9-9FF1-08A62B9FD7A6::.NETCoreApp,Version=v3.1::GZipTest.Tests.AppTests.CompressCalledOnEveryProcessor&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::8378419C-BB3F-4AF9-9FF1-08A62B9FD7A6::.NETCoreApp,Version=v3.1::GZipTest.Tests.AppTests.DecompressCalledCorrectly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::8378419C-BB3F-4AF9-9FF1-08A62B9FD7A6::.NETCoreApp,Version=v3.1::GZipTest.Tests.Compress.CompressorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::8378419C-BB3F-4AF9-9FF1-08A62B9FD7A6::.NETCoreApp,Version=v3.1::GZipTest.Tests.Compress.DecompressorTests.DecompressBytes&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

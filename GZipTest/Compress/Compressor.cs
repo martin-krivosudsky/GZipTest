@@ -15,8 +15,9 @@ namespace GZipTest.Compress
         private readonly ConcurrentDictionary<long, byte[]> _chunks;
         private long _chunkIndex;
         private long _expectedChunkIndex;
+        private long _chunkSize;
 
-        public Compressor(IFileHelper fileHelper)
+        public Compressor(IFileHelper fileHelper, long chunkSize = Constants.ChunkSize)
         {
             _fileHelper = fileHelper ?? throw new ArgumentNullException(nameof(fileHelper));
 
@@ -24,6 +25,7 @@ namespace GZipTest.Compress
             _currentReadPosition = 0;
             _chunkIndex = 0;
             _expectedChunkIndex = 0;
+            _chunkSize = chunkSize;
         }
 
         public void Compress(string originalFileName, long originalFileSize, string archiveFileName)
@@ -74,7 +76,7 @@ namespace GZipTest.Compress
                 readPosition = _currentReadPosition;
                 chunkIndex = _chunkIndex;
 
-                _currentReadPosition += Constants.ChunkSize;
+                _currentReadPosition += _chunkSize;
 
                 if (readPosition > originalFileSize)
                 {
@@ -85,9 +87,9 @@ namespace GZipTest.Compress
                 _chunkIndex++;
             }
 
-            var readSize = readPosition + Constants.ChunkSize > originalFileSize
+            var readSize = readPosition + _chunkSize > originalFileSize
                 ? originalFileSize - readPosition
-                : Constants.ChunkSize;
+                : _chunkSize;
 
 
             var bytes = _fileHelper.ReadBytes(originalFileName, readPosition, (int)readSize);
