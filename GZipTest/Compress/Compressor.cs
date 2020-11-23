@@ -57,7 +57,7 @@ namespace GZipTest.Compress
             using var memoryStream = new MemoryStream();
             using var gzipStream = new GZipStream(memoryStream, CompressionLevel.Optimal);
 
-            if (_chunks.TryGetValue(chunkIndex, out var bytes))
+            if (_chunks.TryRemove(chunkIndex, out var bytes))
             {
                 gzipStream.Write(bytes, 0, bytes.Length);
                 gzipStream.Close();
